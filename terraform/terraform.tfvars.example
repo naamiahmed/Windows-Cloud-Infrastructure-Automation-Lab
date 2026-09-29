@@ -1,0 +1,19 @@
+# AWS Region
+aws_region = "us-west-2"
+
+# EC2 Instance Configuration
+instance_name = "windows-server-lab"
+instance_type = "t3.micro"
+
+# Key Pair Name (Existing key pair in your AWS account, e.g. "devops")
+# Required to retrieve the initial Windows Administrator password
+key_name = "windows_instance"
+
+# Security: Allowed CIDRs (Restricting RDP to your public IP is strongly recommended)
+# Example: allowed_rdp_cidr = ["203.0.113.25/32"]
+allowed_rdp_cidr  = ["0.0.0.0/0"]
+allowed_http_cidr = ["0.0.0.0/0"]
+
+# Storage Configuration (EBS gp3, 30 GB minimum for Windows Server Base)
+root_volume_size = 30
+root_volume_type = "gp3"
